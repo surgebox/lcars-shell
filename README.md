@@ -22,6 +22,50 @@ a normal desktop.
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
+## Getting started (for teammates)
+
+**You need: Fedora 44** in VirtualBox or on a real machine. The shell targets
+the 0.2.1 Quickshell that Fedora 44 ships — don't use another Fedora version
+without reading the notes below. Then, from a terminal:
+
+```bash
+# 1. Clone into your home directory (the config expects this exact path):
+cd ~
+git clone https://github.com/surgebox/lcars-shell.git
+
+# 2. One-shot installer — Hyprland + Quickshell + apps + font (10–20 min):
+cd lcars-shell
+bash scripts/setup-fedora.sh
+
+# 3. Log out, and at the login screen pick the "Hyprland" session (gear icon).
+```
+
+You should land in the LCARS shell: top bar with clock + workspace pips,
+left MENU column, bottom status strip with live CPU/RAM/uptime.
+`SUPER+Return` opens a terminal; click **APPLICATIONS → WEB // FIREFOX** to
+open a browser.
+
+**Graphics notes:**
+- **VirtualBox without 3D acceleration:** works out of the box — software
+  rendering is pre-configured — but expect it to be slow. See
+  `docs/vm-virtualbox.md` for the 3D-acceleration upgrade.
+- **Physical machine with a real GPU:** comment out the two lines
+  `env = LIBGL_ALWAYS_SOFTWARE` and `env = GALLIUM_DRIVER` in
+  `~/.config/hypr/hyprland.conf` for full speed.
+
+**Status:** this is Phase 1/2 — bars, workspace switching, launcher, and live
+system stats all work. Notifications, the file viewer, and the network panel
+are the next milestones (see `docs/PHASES.md`; the full first-run walkthrough
+is `docs/FIRST-RUN.md`).
+
+**Want to change the look?** Every color/font/metric lives in
+`shell/LcarsStyle.qml` (rules in `docs/STYLE.md`). Edit anything in `shell/`
+— Quickshell hot-reloads on save.
+
+**Pushing changes** uses your own GitHub account: ask to be added as a
+collaborator on the (private) repo, then run `gh auth login` once on your
+machine.
+
 ## Why this stack
 
 | Piece | Job |
