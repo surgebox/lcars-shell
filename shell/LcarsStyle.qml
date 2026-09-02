@@ -30,7 +30,7 @@ QtObject {
     // ---- Metrics ----
     readonly property int barHeight:        64   // top master bar
     readonly property int statusBarHeight:  48   // bottom status strip
-    readonly property int navWidth:         150  // left navigation column
+    readonly property int navWidth:         195  // left navigation column
     readonly property int radius:           24   // large LCARS rounding
     readonly property int radiusSmall:      10   // buttons, pips
     readonly property int margin:           16
