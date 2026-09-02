@@ -1,0 +1,15 @@
+# Registers every QML file in this directory as a type.
+# In Qt 6, when a qmldir exists, loose .qml files are NOT auto-registered —
+# they must be listed here (that's why "LcarsPanel is not a type" appeared).
+singleton LcarsStyle 1.0 LcarsStyle.qml
+LcarsPanel 1.0 LcarsPanel.qml
+LcarsElbow 1.0 LcarsElbow.qml
+LcarsButton 1.0 LcarsButton.qml
+LcarsLabel 1.0 LcarsLabel.qml
+TopBar 1.0 TopBar.qml
+StatusBar 1.0 StatusBar.qml
+NavPanel 1.0 NavPanel.qml
+WorkspacePager 1.0 WorkspacePager.qml
+ClockReadout 1.0 ClockReadout.qml
+SystemReadout 1.0 SystemReadout.qml
+Launcher 1.0 Launcher.qml
